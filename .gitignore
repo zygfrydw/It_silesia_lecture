@@ -1,0 +1,26 @@
+.DS_Store
+trunk/Library
+trunk/Temp
+*.csproj
+*.pidb
+*.unityproj
+*.sln
+*.suo
+*.userprefs
+obj/
+trunk/Temp/
+trunk/Start_Data/
+trunk/Start.exe
+#######
+# Git
+######
+*.orig
+*.orig.meta
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.MERGED.*
+
+Library/
+Temp/
+
