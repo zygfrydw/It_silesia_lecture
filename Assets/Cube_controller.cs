@@ -7,12 +7,10 @@ public class Cube_controller : MonoBehaviour
 	public float speed;
 	
     public bool RotateCube;
-MeshRenderer cubeMaterial;	
+	MeshRenderer cubeMaterial;	
 
 	
-		GetComponent<TapGesture>().StateChanged += HandleStateChanged;
-		cubeMaterial = GetComponent<MeshRenderer>();
-	}
+	
 
 	void HandleStateChanged (object sender, TouchScript.Events.GestureStateChangeEventArgs e)
 	{
@@ -22,11 +20,18 @@ MeshRenderer cubeMaterial;
 		else 
 		cubeMaterial.renderer.material.color = Color.red;
 		
-
+	}
 	void Start ()
 	{
 	    RotateCube = true;
+		
+		
+		GetComponent<TapGesture>().StateChanged += HandleStateChanged;
+		cubeMaterial = GetComponent<MeshRenderer>();
 	}
+	
+	
+		
     void Update() {
         
 	    if (RotateCube)
