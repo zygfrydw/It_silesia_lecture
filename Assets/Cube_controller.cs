@@ -2,21 +2,21 @@
 using System.Collections;
 
 public class Cube_controller : MonoBehaviour
-{
+	public float speed;
 
     public bool RotateCube;
 
-	// Use this for initialization
 	void Start ()
 	{
 	    RotateCube = true;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Update() {
+        
 	    if (RotateCube)
 	    {
-            transform.Rotate(new Vector3(30,30,10) * Time.deltaTime);
+            transform.Rotate(Vector3.right * Time.deltaTime * speed);
+        	transform.Rotate(Vector3.up * Time.deltaTime * speed /*Space.World*/);
+
 	    }
 	}
 
