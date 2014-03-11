@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Cube_controller : MonoBehaviour
+{
 	public float speed;
 
     public bool RotateCube;
